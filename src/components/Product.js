@@ -22,7 +22,7 @@ export const Product = () => {
             setLoading(false);
         }
         getProduct();
-    },[]  )
+    }  )
 
     const Loading =()=>{
         return(
