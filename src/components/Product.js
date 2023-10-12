@@ -22,7 +22,8 @@ export const Product = () => {
             setLoading(false);
         }
         getProduct();
-    }  )
+// eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
 
     const Loading =()=>{
         return(
