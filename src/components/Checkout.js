@@ -8,7 +8,7 @@ const Checkout = () => {
     const itemList = (item) => {
         total = total + item.price;
         return (
-            <li className="list-group-item d-flex justify-content-between lh-sm">
+            <li key={item.id} className="list-group-item d-flex justify-content-between lh-sm">
                 <div>
                     <h6 className="my-0">{item.title}</h6>
                 </div>
@@ -29,7 +29,7 @@ const Checkout = () => {
                         <ul className="list-group mb-3">
                             {state.map(itemList)}
 
-                            <li className="list-group-item d-flex justify-content-between">
+                            <li key="total" className="list-group-item d-flex justify-content-between">
                                 <span>Total (USD)</span>
                                 <strong>${total}</strong>
                             </li>

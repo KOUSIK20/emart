@@ -2,3 +2,15 @@
 .navbar-nav{
   font-size:18px ;
 }
+@media(max-width: 600px){
+  .heading{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+  }
+  .bg{
+    width: 447px;
+  }
+
+}

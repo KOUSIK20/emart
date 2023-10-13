@@ -44,13 +44,16 @@ import { NavLink } from 'react-router-dom';
     const ShowProducts =()=>{
         return(
             <>
-            <div className='buttons d-flex justify-content-center mb-5 pb-5'>
+            <div className='heading '>
+            <div className='buttons d-flex justify-content-center mb-5 pb-0 pb-xl-5 '>
                 <button className='btn btn-outline-dark me-2' onClick={()=>setFilter(data)}>All</button>
                 <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("men's clothing")}>Men's Clothing</button>
                 <button className='btn btn-outline-dark me-2' onClick={()=>filterProduct("women's clothing")}>Women's Clothing</button>
                 <button className='btn btn-outline-dark me-2'onClick={()=>filterProduct("jewelery")}>Jewelery</button>
-                <button className='btn btn-outline-dark me-2'onClick={()=>filterProduct("electronics")}>Electronics</button>
+                <button className='btn btn-outline-dark me-2'onClick={()=>filterProduct("electronics")}>Electronic</button>
             </div>
+            </div>
+            
             {filter.map((product)=>{
                 return(
                     <>
