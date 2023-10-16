@@ -32,8 +32,17 @@ const handleCart = (state = cart, action) => {
         else{
             return state.map((x)=>x.id===product.id ? {...x,qty : x.qty-1}:x);
         }
-      default:
+    case "REMITEM":
+      const exist2 = state.find((x)=> x.id === product.id);
+      if(exist2){
+        return state.filter((x)=>x.id !== exist2.id);
+      }
+      break;
+      
+    default:
         return state;
+
+        
         
   }
 };

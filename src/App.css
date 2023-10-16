@@ -6,11 +6,25 @@
   .heading{
     display: flex;
     align-content: center;
-    flex-wrap: wrap;
+    
 
   }
   .bg{
-    width: 447px;
+    width: 100%;
   }
+  .card-img{
+    height: 600px;
 
+  }
+  
+.navbar-toggler{
+  width: 50px;
+ 
+}
+.heading > div {
+  flex-wrap: wrap;
+}
+.heading > div > button{
+  margin-top: 12px;
+}
 }

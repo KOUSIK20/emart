@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import {addCart, delCart} from './Redux/Action/index'
+import {addCart, delCart,remCart} from './Redux/Action/index'
 import { NavLink } from 'react-router-dom'
 
 
@@ -15,12 +15,15 @@ import { NavLink } from 'react-router-dom'
     const handleButton =(item)=>{
         dispatch(addCart(item))     
     }
+    const handleRemove =(item)=>{
+        dispatch(remCart(item))
+    }
 
     const cartItems = (cartItem) => {
         return(
             <div className="px-4 my-5 bg-light rounded-3" key={cartItem.id}>
                 <div className="container py-4">
-                    <button onClick={()=>handleDelete(cartItem)} className="btn-close float-end" aria-label="Close"></button>
+                    <button onClick={()=>handleRemove(cartItem)} className="btn-close float-end" aria-label="Close"></button>
                     <div className="row justify-content-center">
                         <div className="col-md-4">
                             <img src={cartItem.image} alt={cartItem.title} height="200px" width="180px" />

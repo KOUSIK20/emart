@@ -7,11 +7,19 @@ export const addCart = (product) => {
   } 
 }
 
-//for delete item from cart
+//for minus item from cart
 
 export const delCart = (product) => {
     return{
       type: "DELITEM",
       payload: product
     } 
+  }
+
+  // for remove item from cart
+  export const remCart = (product) =>{
+    return{
+      type: "REMITEM",
+      payload: product
+    }
   }

@@ -1,21 +1,33 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+
 const Checkout = () => {
     const state = useSelector((state) => state.handleCart)
 
-    var total = 0;
+ 
     const itemList = (item) => {
-        total = total + item.price;
+        
+        
         return (
             <li key={item.id} className="list-group-item d-flex justify-content-between lh-sm">
                 <div>
-                    <h6 className="my-0">{item.title}</h6>
+                    <h6 className="my-0">{item.title} - {item.qty} Qty x  $ {item.price} </h6>
                 </div>
-                <span className="text-muted">${item.price}</span>
+                <span className="text-muted">${ item.qty * item.price} </span>
             </li>
         );
     }
+ 
+    const checkTotal = ()=>{
+        let total = 0;
+        //[128,118,111]
+         state.map((item)=>  total =  total +  ( item.qty * item.price))
+        
+        return total;
+    
+    }
+
 
     return (
         <>
@@ -31,7 +43,7 @@ const Checkout = () => {
 
                             <li key="total" className="list-group-item d-flex justify-content-between">
                                 <span>Total (USD)</span>
-                                <strong>${total}</strong>
+                                <strong>$ {checkTotal()}</strong>
                             </li>
                         </ul>
 
