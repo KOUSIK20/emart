@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 
+
 const Checkout = () => {
     const state = useSelector((state) => state.handleCart)
 
@@ -27,8 +28,7 @@ const Checkout = () => {
         return total;
     
     }
-
-
+    
     return (
         <>
             <div className="container my-5">
@@ -60,7 +60,7 @@ const Checkout = () => {
                             <div className="row g-3">
                                 <div className="col-sm-6">
                                     <label htmlFor="firstName" className="form-label">First name</label>
-                                    <input type="text" className="form-control" id="firstName" placeholder="" value="" required="" />
+                                    <input type="text" className="form-control" id="firstName" placeholder="Kousik"  required="" />
                                     <div className="invalid-feedback">
                                         Valid first name is required.
                                     </div>
@@ -68,7 +68,7 @@ const Checkout = () => {
 
                                 <div className="col-sm-6">
                                     <label htmlFor="lastName" className="form-label">Last name</label>
-                                    <input type="text" className="form-control" id="lastName" placeholder="" value="" required="" />
+                                    <input type="text" className="form-control" id="lastName" placeholder="S"  required="" />
                                     <div className="invalid-feedback">
                                         Valid last name is required.
                                     </div>
@@ -110,6 +110,7 @@ const Checkout = () => {
                                     <label htmlFor="country" className="form-label">Country</label>
                                     <select className="form-select" id="country" required="">
                                         <option value="">Choose...</option>
+                                        <option>India</option>
                                         <option>United States</option>
                                     </select>
                                     <div className="invalid-feedback">
@@ -121,7 +122,8 @@ const Checkout = () => {
                                     <label htmlFor="state" className="form-label">State</label>
                                     <select className="form-select" id="state" required="">
                                         <option value="">Choose...</option>
-                                        <option>California</option>
+                                        <option>Tamilnadu</option>
+                                        <option>Kerala</option>
                                     </select>
                                     <div className="invalid-feedback">
                                         Please provide a valid state.
@@ -129,10 +131,10 @@ const Checkout = () => {
                                 </div>
 
                                 <div className="col-md-3">
-                                    <label htmlFor="zip" className="form-label">Zip</label>
+                                    <label htmlFor="zip" className="form-label">Pincode</label>
                                     <input type="text" className="form-control" id="zip" placeholder="" required="" />
                                     <div className="invalid-feedback">
-                                        Zip code required.
+                                        Pin code required.
                                     </div>
                                 </div>
                             </div>
@@ -205,7 +207,7 @@ const Checkout = () => {
 
                             <hr className="my-4" />
 
-                            <button className="w-100 btn btn-secondary btn-lg" type="submit" disabled>Continue to checkout</button>
+                            <button className="w-100 btn btn-secondary btn-lg" type="submit"  >Continue to checkout</button>
                         </form>
                     </div>
                 </div>
